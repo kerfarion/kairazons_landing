@@ -434,23 +434,32 @@ body { color: var(--text-color); background-color: #ffffff; overflow-x: hidden; 
     .products-grid { grid-template-columns: repeat(3, 1fr); }
     .blog-products-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ===== МОБИЛЬНЫЕ МОДАЛЬНЫЕ ОКНА (ТОЛЬКО ТЕКСТ И ССЫЛКИ, БЕЗ КАРТИНОК) ===== */
 @media (max-width: 768px) {
     .article-modal-wrapper {
         width: 95vw !important;
-        height: 80vh !important;
+        height: auto !important; /* высота по содержимому */
+        min-height: 60vh !important;
+        max-height: 90vh !important;
         flex-direction: column;
+        padding: 20px !important;
     }
     .product-modal-gallery {
-        height: 40% !important;
+        display: none !important; /* полностью скрываем картинки */
     }
     .product-modal-details {
-        height: 60% !important;
-        padding: 20px;
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        overflow-y: auto;
+        flex: none;
     }
     .modal-article-body {
-        padding: 20px;
+        padding: 20px 0;
     }
 }
+
 @media (max-width: 600px) { 
     .nav { display: none; }
     .products-grid { grid-template-columns: repeat(2, 1fr); }

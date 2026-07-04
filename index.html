@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бритвы KAI — японское качество для идеального бритья</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header" id="main-header">
+        <div class="container-fluid header-container">
+            <a href="#" class="logo"><img src="images/logo.png" alt="KAI Logo"></a>
+            <nav class="nav">
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#about" class="nav-link">О Нас</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contacts" class="nav-link">Контакты</a>
+            </nav>
+            <div class="header-right">
+                <a href="tel:+78005551841" class="phone">+7 (800) 555-18-41</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container-fluid hero-container">
+            
+            <!-- ===== БЕГУЩАЯ СТРОКА (каждое слово отдельно, непрерывно) ===== -->
+            <div class="hero-ticker-wrapper">
+                <div class="hero-ticker-track">
+                    <!-- Первый набор -->
+                    <div class="hero-ticker-item">Технологии</div>
+                    <div class="hero-ticker-item">Качество</div>
+                    <div class="hero-ticker-item">Инновации</div>
+                    <!-- Второй набор для бесконечности -->
+                    <div class="hero-ticker-item">Технологии</div>
+                    <div class="hero-ticker-item">Качество</div>
+                    <div class="hero-ticker-item">Инновации</div>
+                </div>
+            </div>
+            <!-- ======================================================== -->
+
+            <div class="hero-socials">
+                <a href="#" class="social-link-item"><img src="images/telegram-icon.png" alt=""> Telegram</a>
+                <a href="#" class="social-link-item"><img src="images/vk-icon.png" alt=""> VK</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="catalog section-padding">
+        <div class="container-fluid">
+            <h2 class="section-title">КАТАЛОГ</h2>
+            
+            <div class="products-grid">
+                
+                <!-- 1-я карточка → Одноразовый с плавающей головкой (двойное лезвие) -->
+                <div class="product-card-fixed" data-id="1" onclick="openProductModal(1)">
+                    <div class="product-img-wrapper">
+                        <button class="slider-arrow prev" onclick="changeImage(event, this, 1, -1)">&lsaquo;</button>
+                        <img src="images/product1_1.png" alt="Станок с плавающей головкой KAI" class="product-img" data-slide="0">
+                        <button class="slider-arrow next" onclick="changeImage(event, this, 1, 1)">&rsaquo;</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="price">350 ₽</div>
+                        <p class="product-desc-mini">Одноразовый бритвенный станок с плавающей головкой с двойным лезвием, 2 шт.</p>
+                        <div class="product-card-marketplace-links" onclick="event.stopPropagation()">
+                            <a href="https://www.wildberries.ru/catalog/474774443/detail.aspx?targetUrl=SN" class="prod-market-link wb-btn" target="_blank">Wildberries</a>
+                            <a href="https://ozon.ru/t/8DyouVX" class="prod-market-link ozon-btn" target="_blank">Ozon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2-я карточка → Эко-картон -->
+                <div class="product-card-fixed" data-id="2" onclick="openProductModal(2)">
+                    <div class="product-img-wrapper">
+                        <button class="slider-arrow prev" onclick="changeImage(event, this, 2, -1)">&lsaquo;</button>
+                        <img src="images/product2_1.png" alt="Эко-станок KAI" class="product-img" data-slide="0">
+                        <button class="slider-arrow next" onclick="changeImage(event, this, 2, 1)">&rsaquo;</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="price">350 ₽</div>
+                        <p class="product-desc-mini">Одноразовый бритвенный станок из эко-картона с тройным лезвием из нержавеющей стали</p>
+                        <div class="product-card-marketplace-links" onclick="event.stopPropagation()">
+                            <a href="https://www.wildberries.ru/catalog/474499281/detail.aspx?targetUrl=SN" class="prod-market-link wb-btn" target="_blank">Wildberries</a>
+                            <a href="https://ozon.ru/t/wWN5vof" class="prod-market-link ozon-btn" target="_blank">Ozon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3-я карточка → Т-образный для зоны бикини -->
+                <div class="product-card-fixed" data-id="black" onclick="openProductModal('black')">
+                    <div class="product-img-wrapper">
+                        <button class="slider-arrow prev" onclick="changeImage(event, this, 'black', -1)">&lsaquo;</button>
+                        <img src="images/product3_1.png" alt="Т-образный станок KAI" class="product-img" data-slide="0">
+                        <button class="slider-arrow next" onclick="changeImage(event, this, 'black', 1)">&rsaquo;</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="price">390 ₽</div>
+                        <p class="product-desc-mini">Т-образный одноразовый станок для зоны бикини, 2 шт.</p>
+                        <div class="product-card-marketplace-links" onclick="event.stopPropagation()">
+                            <a href="https://www.wildberries.ru/catalog/525521253/detail.aspx?size=725075125" class="prod-market-link wb-btn" target="_blank">Wildberries</a>
+                            <a href="https://ozon.ru/t/wGXDjZU" class="prod-market-link ozon-btn" target="_blank">Ozon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4-я карточка → Водостойкий женский (5 лезвий) -->
+                <div class="product-card-fixed" data-id="3" onclick="openProductModal(3)">
+                    <div class="product-img-wrapper">
+                        <button class="slider-arrow prev" onclick="changeImage(event, this, 3, -1)">&lsaquo;</button>
+                        <img src="images/product4_1.png" alt="Водостойкий станок KAI" class="product-img" data-slide="0">
+                        <button class="slider-arrow next" onclick="changeImage(event, this, 3, 1)">&rsaquo;</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="price">990 ₽</div>
+                        <p class="product-desc-mini">Водостойкий одноразовый бритвенный станок с 5 лезвиями и увлажняющей полоской для женщин, 3 шт.</p>
+                        <div class="product-card-marketplace-links" onclick="event.stopPropagation()">
+                            <a href="https://www.wildberries.ru/catalog/525515822/detail.aspx?size=725069568" class="prod-market-link wb-btn" target="_blank">Wildberries</a>
+                            <a href="https://ozon.ru/t/NB2njKP" class="prod-market-link ozon-btn" target="_blank">Ozon</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-я карточка → Женский одноразовый -->
+                <div class="product-card-fixed" data-id="eco" onclick="openProductModal('eco')">
+                    <div class="product-img-wrapper">
+                        <button class="slider-arrow prev" onclick="changeImage(event, this, 'eco', -1)">&lsaquo;</button>
+                        <img src="images/product5_1.png" alt="Женский станок KAI" class="product-img" data-slide="0">
+                        <button class="slider-arrow next" onclick="changeImage(event, this, 'eco', 1)">&rsaquo;</button>
+                    </div>
+                    <div class="product-info">
+                        <div class="price">390 ₽</div>
+                        <p class="product-desc-mini">Женский одноразовый станок для бритья, 2 шт.</p>
+                        <div class="product-card-marketplace-links" onclick="event.stopPropagation()">
+                            <a href="https://www.wildberries.ru/catalog/708499508/detail.aspx?size=989278213" class="prod-market-link wb-btn" target="_blank">Wildberries</a>
+                            <a href="https://ozon.ru/t/iNbyGUP" class="prod-market-link ozon-btn" target="_blank">Ozon</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="blog section-padding">
+        <div class="container-fluid">
+            <h2 class="section-title">Блог</h2>
+            <div class="blog-products-grid">
+                <div class="blog-card-fixed">
+                    <div class="blog-img-wrapper"><img src="images/blog1.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-card-content">
+                        <h4>KAI Moisturizing Razor</h4>
+                        <p>Роскошный уход и безупречная гладкость для Неё</p>
+                        <button class="btn-blog-open" onclick="openArticle('moisturizing')">Читать статью</button>
+                    </div>
+                </div>
+                <div class="blog-card-fixed">
+                    <div class="blog-img-wrapper"><img src="images/blog2.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-card-content">
+                        <h4>KAI T-shaped Razor</h4>
+                        <p>Ювелирная точность для деликатных зон</p>
+                        <button class="btn-blog-open" onclick="openArticle('tshaped')">Читать статью</button>
+                    </div>
+                </div>
+                <div class="blog-card-fixed">
+                    <div class="blog-img-wrapper"><img src="images/blog3.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-card-content">
+                        <h4>KAI razor «Besty EX»</h4>
+                        <p>Технологии и комфорт в классическом исполнении</p>
+                        <button class="btn-blog-open" onclick="openArticle('besty')">Читать статью</button>
+                    </div>
+                </div>
+                <div class="blog-card-fixed">
+                    <div class="blog-img-wrapper"><img src="images/blog4.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-card-content">
+                        <h4>Kai Paper Razor</h4>
+                        <p>Революция в бритье. Забота о коже и планете</p>
+                        <button class="btn-blog-open" onclick="openArticle('paper')">Читать статью</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews section-padding">
+        <div class="container-fluid">
+            <h2 class="section-title">Отзывы</h2>
+            <p class="section-subtitle">Более 500+ отзывов на маркетплейсах</p>
+            <div class="reviews-slider">
+                <div class="review-item">
+                    <p class="review-text">«отличные станочки , рекомендую !»</p>
+                    <div class="review-meta">
+                        <img src="images/ozon-mini.png" alt="Ozon" class="source-ico">
+                        <span class="review-author">Владимир О.</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p class="review-text">«Товар оригинальный. Упаковка в пупырку»</p>
+                    <div class="review-meta">
+                        <img src="images/wb-mini.png" alt="WB" class="source-ico">
+                        <span class="review-author">Роман</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p class="review-text">«Станки хорошо аккуратно упакованы в пупырку... качество отличное,бреют хорошо»</p>
+                    <div class="review-meta">
+                        <img src="images/ozon-mini.png" alt="Ozon" class="source-ico">
+                        <span class="review-author">Надежда З.</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p class="review-text">«Отличные станки, пришли отлично упакованы.»</p>
+                    <div class="review-meta">
+                        <img src="images/ozon-mini.png" alt="Ozon" class="source-ico">
+                        <span class="review-author">Анна</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketplaces">
+        <div class="container-fluid">
+            <h3 class="market-title">Вы можете купить тут:</h3>
+            <div class="market-buttons">
+                <a href="#" class="market-btn wb"><img src="images/wb-large.png" alt="Wildberries"></a>
+                <a href="#" class="market-btn ozon"><img src="images/ozon-large.png" alt="Ozon"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <h3 class="partners-title">Наши партнеры</h3>
+        <div class="partners-ticker-view">
+            <div class="partners-line line-1">
+                <img src="images/partner1.png" alt="Partner" class="partner-img">
+                <img src="images/partner2.png" alt="Partner" class="partner-img">
+                <img src="images/partner3.png" alt="Partner" class="partner-img">
+                <img src="images/partner4.png" alt="Partner" class="partner-img">
+                <img src="images/partner5.png" alt="Partner" class="partner-img">
+            </div>
+            <div class="partners-line line-2">
+                <img src="images/partner1.png" alt="Partner" class="partner-img">
+                <img src="images/partner2.png" alt="Partner" class="partner-img">
+                <img src="images/partner3.png" alt="Partner" class="partner-img">
+                <img src="images/partner4.png" alt="Partner" class="partner-img">
+                <img src="images/partner5.png" alt="Partner" class="partner-img">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacts" class="main-footer">
+        <div class="container-fluid footer-wrap">
+            <div class="footer-logo-block"><img src="images/logo-black.png" alt="KAI Logo"></div>
+            <div class="footer-links">
+                <button onclick="openInfoModal('about-company')">О нас</button>
+                <a href="#catalog" class="footer-nav-link">Каталог</a>
+                <button onclick="openInfoModal('contacts-company')">Контакты</button>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright-line"><p>© 2025 ООО РЯТИКО</p></div>
+        </div>
+    </footer>
+
+    <div id="article-modal" class="article-modal">
+        <div class="article-modal-overlay" onclick="closeArticle()"></div>
+        <div class="article-modal-wrapper">
+            <button class="article-close" onclick="closeArticle()">&times;</button>
+            <div id="article-dynamic-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

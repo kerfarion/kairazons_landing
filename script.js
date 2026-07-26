@@ -1,3 +1,4 @@
+// ===== ДАННЫЕ ТОВАРОВ =====
 const productsData = {
     1: {
         name: "Одноразовый бритвенный станок с плавающей головкой с двойным лезвием, 2 шт.",
@@ -46,20 +47,12 @@ const productsData = {
     }
 };
 
-const productIdToNumber = {
-    1: 1,
-    2: 2,
-    'black': 3,
-    3: 4,
-    'eco': 5
-};
+const productIdToNumber = { 1: 1, 2: 2, 'black': 3, 3: 4, 'eco': 5 };
 
 function generateImagesArray(productId, count) {
     const number = productIdToNumber[productId];
     const images = [];
-    for (let i = 1; i <= count; i++) {
-        images.push(`images/product${number}_${i}.png`);
-    }
+    for (let i = 1; i <= count; i++) { images.push(`images/product${number}_${i}.png`); }
     return images;
 }
 
@@ -71,64 +64,25 @@ Object.keys(productsData).forEach(key => {
 const articlesData = {
     moisturizing: {
         title: "KAI Moisturizing Razor: Роскошный уход и безупречная гладкость для Неё",
-        html: `
-            <p>Мы знаем, что женская кожа требует особого, деликатного подхода. Этот станок, разработанный по передовым японским технологиям, превращает бритье в настоящую спа-процедуру. Он идеально подходит для бритья ног, подмышек и зоны бикини, оставляя после себя только ощущение шелковистой, ухоженной кожи.</p>
-            <p><strong>Ключевые особенности:</strong></p>
-            <ul>
-                <li><strong>Технология 5 лезвий:</strong> Пять сверхострых лезвий из нержавеющей стали обеспечивают безупречно чистое бритье с первого движения, легко справляясь даже с тонкими волосками.</li>
-                <li><strong>Интенсивное увлажнение:</strong> Широкая смазывающая полоска обогащена аргановым маслом и витамином Е, которые интенсивно питают, смягчают и защищают кожу прямо в процессе бритья.</li>
-                <li><strong>Адаптация к контурам:</strong> Плавающая головка точно повторяет каждый изгиб вашего тела, гарантируя комфорт и безопасность на самых сложных участках.</li>
-                <li><strong>Уверенный контроль:</strong> Эргономичная прорезиненная ручка не скользит в руке, обеспечивая полный контроль даже в душе.</li>
-            </ul>
-            <p style="font-weight:700; text-align:center; margin-top:20px;">KAI Moisturizing Razor — когда бритье становится частью ухода за собой.</p>
-        `
+        html: `<p>Мы знаем, что женская кожа требует особого, деликатного подхода...</p>`
     },
     tshaped: {
         title: "KAI T-shaped Razor: Ювелирная точность для деликатных зон",
-        html: `
-            <p>Уход за зоной бикини требует хирургической точности и абсолютной безопасности. Мы создали специальный инструмент, который позволяет моделировать и ухаживать за этой деликатной областью без боли, порезов и раздражения. Это ваш секрет идеального и аккуратного стайлинга.</p>
-            <p><strong>Ключевые особенности:</strong></p>
-            <ul>
-                <li><strong>Абсолютная безопасность:</strong> Уникальная защитная решетка на лезвии не позволяет ему касаться кожи. Станок срезает только волоски, полностью исключая риск порезов.</li>
-                <li><strong>Точное моделирование:</strong> Компактная Т-образная форма головки идеально подходит для создания четких линий и аккуратного бритья в труднодоступных местах.</li>
-                <li><strong>Высокая эффективность:</strong> Острое лезвие легко приподнимает и срезает даже самые короткие волоски, обеспечивая идеальный результат надолго.</li>
-                <li><strong>Долговечность:</strong> Одного острого лезвия хватает в среднем на 2 месяца использования, что делает этот станок не только удобным, но и экономичным.</li>
-            </ul>
-            <p style="font-weight:700; text-align:center; margin-top:20px;">KAI T-shaped Razor — полный контроль и уверенность для самых деликатных задач.</p>
-        `
+        html: `<p>Уход за зоной бикини требует хирургической точности...</p>`
     },
     besty: {
         title: "KAI razor «Besty EX»: Технологии и комфорт в классическом исполнении",
-        html: `
-            <p>Для тех, кто ценит надежность, доведенную до совершенства. KAI «Besty EX» — это не просто одноразовая бритва, а продуманный инструмент для идеально чистого и комфортного бритья. Мы взяли классическую конструкцию с двойным лезвием и оснастили ее передовыми разработками KAI, чтобы вы чувствовали только уверенность и гладкость.</p>
-            <p><strong>Ключевые особенности:</strong></p>
-            <ul>
-                <li><strong>Лезвия с двойным титановым покрытием:</strong> Обеспечивают невероятно легкое скольжение и продлевают остроту, бережно относясь к вашей коже.</li>
-                <li><strong>Адаптивное бритье:</strong> Плавающая головка идеально повторяет контуры лица, а увлажняющая полоска с алоэ смягчает кожу, предотвращая раздражение.</li>
-                <li><strong>Продуманная эргономика:</strong> Идеально сбалансированная ручка комфортно лежит в руке, давая вам полный контроль над каждым движением.</li>
-                <li><strong>Гигиена и защита:</strong> Специальное антибактериальное покрытие защищает вашу кожу, делая процесс бритья максимально безопасным.</li>
-            </ul>
-            <p style="font-weight:700; text-align:center; margin-top:20px;">KAI «Besty EX» — это интеллектуальный подход к ежедневным задачам.</p>
-        `
+        html: `<p>Для тех, кто ценит надежность...</p>`
     },
     paper: {
         title: "Kai Paper Razor: Революция в бритье. Забота о коже и планете.",
-        html: `
-            <p>Представляем первый в мире бритвенный станок, практически полностью созданный из бумаги! Kai Paper Razor — это наш ответ на вызовы времени и шаг в будущее осознанного потребления. Легкий, компактный, экологичный и при этом бескомпромиссно острый. Это больше, чем бритва — это заявление.</p>
-            <p><strong>Ключевые особенности:</strong></p>
-            <ul>
-                <li><strong>100% Экологичность:</strong> Ручка и головка станка сделаны из прочного эко-картона. Никакого лишнего пластика — только забота о планете.</li>
-                <li><strong>Инновационная конструкция:</strong> Станок весит всего 4 грамма и собирается за секунды, как оригами. Идеальное решение для путешествий, спортзала и тех, кто ценит минимализм.</li>
-                <li><strong>Японская точность:</strong> Острое тройное лезвие из высококачественной нержавеющей стали гарантирует гладкое и чистое бритье, которого вы ожидаете от KAI.</li>
-                <li><strong>Надежность:</strong> Специальное покрытие делает картон устойчивым к воде температурой до 40°, обеспечивая комфортное использование.</li>
-            </ul>
-            <p style="font-weight:700; text-align:center; margin-top:20px;">Kai Paper Razor — ваш выбор, если вы цените инновации и заботитесь о будущем.</p>
-        `
+        html: `<p>Представляем первый в мире бритвенный станок...</p>`
     },
-    'about-company': { title: "О компании KAI", html: "<p>Добро пожаловать в мир безупречного бритья с бритвами KAI — брендом, который сочетает вековые японские традиции мастерства с передовыми разработками.</p>" },
+    'about-company': { title: "О компании KAI", html: "<p>Добро пожаловать в мир безупречного бритья...</p>" },
     'contacts-company': { title: "Контакты организации", html: "<p>ООО РЯТИКО. Москва, Ленинский проспект 111. Тел: 8 (800) 555-18-41</p>" }
 };
 
+// ===== СЛАЙДЕРЫ В КАРТОЧКАХ =====
 function initCardSliders() {
     const productCards = document.querySelectorAll('.product-card-fixed[data-id]');
     productCards.forEach(card => {
@@ -167,46 +121,31 @@ function initCardSliders() {
 }
 
 function initDrag(card, wrapper) {
-    let isDragging = false;
-    let startX = 0;
-    let startY = 0;
-    let moved = false;
-    let threshold = 30;
+    let isDragging = false, startX = 0, startY = 0, moved = false, threshold = 30;
 
     const onStart = (e) => {
         const ev = e.type.startsWith('touch') ? e.touches[0] : e;
-        isDragging = true;
-        startX = ev.clientX;
-        startY = ev.clientY;
-        moved = false;
+        isDragging = true; startX = ev.clientX; startY = ev.clientY; moved = false;
         wrapper.style.cursor = 'grabbing';
     };
 
     const onMove = (e) => {
         if (!isDragging) return;
         const ev = e.type.startsWith('touch') ? e.touches[0] : e;
-        const dx = ev.clientX - startX;
-        const dy = ev.clientY - startY;
+        const dx = ev.clientX - startX; const dy = ev.clientY - startY;
         if (Math.abs(dx) < threshold && Math.abs(dy) < threshold) return;
         if (Math.abs(dx) < Math.abs(dy)) return;
-        moved = true;
-        const dir = dx > 0 ? -1 : 1;
-        stopAutoSlide(card);
-        slideCard(card, dir);
-        isDragging = false;
-        wrapper.style.cursor = 'grab';
+        moved = true; const dir = dx > 0 ? -1 : 1;
+        stopAutoSlide(card); slideCard(card, dir);
+        isDragging = false; wrapper.style.cursor = 'grab';
         setTimeout(() => startAutoSlide(card), 3000);
     };
 
-    const onEnd = () => {
-        isDragging = false;
-        wrapper.style.cursor = 'grab';
-    };
+    const onEnd = () => { isDragging = false; wrapper.style.cursor = 'grab'; };
 
     wrapper.addEventListener('mousedown', onStart);
     document.addEventListener('mousemove', onMove);
     document.addEventListener('mouseup', onEnd);
-
     wrapper.addEventListener('touchstart', onStart, { passive: true });
     document.addEventListener('touchmove', onMove, { passive: true });
     document.addEventListener('touchend', onEnd, { passive: true });
@@ -228,36 +167,21 @@ function slideCard(card, dir) {
     imgCurrent.classList.remove('slide-left', 'slide-right');
     imgNext.classList.remove('slide-left', 'slide-right');
     
-    if (dir === 1) {
-        imgNext.style.transform = 'translateX(100%)';
-        imgNext.classList.add('img-next');
-    } else {
-        imgNext.style.transform = 'translateX(-100%)';
-        imgNext.classList.add('img-next');
-    }
+    if (dir === 1) { imgNext.style.transform = 'translateX(100%)'; imgNext.classList.add('img-next'); } 
+    else { imgNext.style.transform = 'translateX(-100%)'; imgNext.classList.add('img-next'); }
     
     void imgNext.offsetWidth;
     
-    if (dir === 1) {
-        imgCurrent.classList.add('slide-right');
-        imgNext.style.transform = 'translateX(0)';
-        imgNext.classList.remove('img-next');
-    } else {
-        imgCurrent.classList.add('slide-left');
-        imgNext.style.transform = 'translateX(0)';
-        imgNext.classList.remove('img-next');
-    }
+    if (dir === 1) { imgCurrent.classList.add('slide-right'); imgNext.style.transform = 'translateX(0)'; imgNext.classList.remove('img-next'); } 
+    else { imgCurrent.classList.add('slide-left'); imgNext.style.transform = 'translateX(0)'; imgNext.classList.remove('img-next'); }
     
     setTimeout(() => {
         imgCurrent.classList.remove('img-current', 'slide-left', 'slide-right');
-        imgNext.classList.add('img-current');
-        imgNext.classList.remove('img-next');
-        imgCurrent.style.transform = '';
-        imgNext.style.transform = '';
+        imgNext.classList.add('img-current'); imgNext.classList.remove('img-next');
+        imgCurrent.style.transform = ''; imgNext.style.transform = '';
         card.dataset.currentIndex = nextIdx;
         const nextNextIdx = (nextIdx + 1) % images.length;
-        imgCurrent.src = images[nextNextIdx];
-        imgCurrent.classList.add('img-next');
+        imgCurrent.src = images[nextNextIdx]; imgCurrent.classList.add('img-next');
         imgCurrent.style.transform = 'translateX(100%)';
     }, 400);
 }
@@ -266,26 +190,24 @@ function startAutoSlide(card) {
     if (card.dataset.slideInterval) return;
     const images = JSON.parse(card.dataset.images);
     if (images.length < 2) return;
-    card.dataset.slideInterval = setInterval(() => {
-        slideCard(card, 1);
-    }, 5000);
+    card.dataset.slideInterval = setInterval(() => { slideCard(card, 1); }, 5000);
 }
 
 function stopAutoSlide(card) {
-    if (card.dataset.slideInterval) {
-        clearInterval(card.dataset.slideInterval);
-        card.dataset.slideInterval = null;
-    }
+    if (card.dataset.slideInterval) { clearInterval(card.dataset.slideInterval); card.dataset.slideInterval = null; }
 }
 
 window.changeImage = function(event, btn, productId, dir) {
     if (event) event.stopPropagation();
     const card = btn.closest('.product-card-fixed');
     if (!card) return;
-    stopAutoSlide(card);
-    slideCard(card, dir);
+    stopAutoSlide(card); slideCard(card, dir);
     setTimeout(() => startAutoSlide(card), 3000);
 };
+
+// =========================================
+// ===== НОВЫЙ ДИЗАЙН МОДАЛЬНОГО ОКНА =====
+// =========================================
 
 window.openProductModal = function(id) {
     const p = productsData[id];
@@ -296,6 +218,7 @@ window.openProductModal = function(id) {
     const images = p.images;
     const hasMultiple = images.length > 1;
     
+    // Левая часть: большое фото и стрелки '<' и '>'
     let galleryHtml = `<div class="product-modal-gallery">`;
     if (hasMultiple) {
         galleryHtml += `<button class="modal-slider-arrow prev" onclick="changeModalImage(this, -1)">&lsaquo;</button>`;
@@ -303,24 +226,23 @@ window.openProductModal = function(id) {
     galleryHtml += `<img src="${images[0]}" alt="${p.name}" class="modal-product-img" id="modal-product-img">`;
     if (hasMultiple) {
         galleryHtml += `<button class="modal-slider-arrow next" onclick="changeModalImage(this, 1)">&rsaquo;</button>`;
-        galleryHtml += `<div class="modal-slider-dots">`;
-        for (let i = 0; i < images.length; i++) {
-            galleryHtml += `<span class="modal-slider-dot ${i === 0 ? 'active' : ''}" data-index="${i}" onclick="goToModalImage(this, ${i})"></span>`;
-        }
-        galleryHtml += `</div>`;
     }
     galleryHtml += `</div>`;
     
+    // Вся верстка: разделение пополам (layout), типографика и акцентные кнопки внизу
     contentBox.innerHTML = `
-        <div class="product-modal-layout" style="display:flex; height:100%; width:100%;">
+        <div class="product-modal-layout">
             ${galleryHtml}
             <div class="product-modal-details">
-                <h2>${p.name}</h2>
-                <div class="price">${p.price} ₽</div>
-                <div class="description">${p.desc}</div>
-                <div class="market-buttons">
-                    <a href="${p.wb_link}" class="prod-market-link wb-btn" target="_blank">Wildberries</a>
-                    <a href="${p.ozon_link}" class="prod-market-link ozon-btn" target="_blank">Ozon</a>
+                <h2 class="modal-title">${p.name}</h2>
+                <div class="modal-price">${p.price} ₽</div>
+                
+                <!-- Описание и буллиты из properties -->
+                <div class="modal-description">${p.desc}</div>
+                
+                <div class="modal-buttons-wrapper">
+                    <a href="${p.wb_link}" class="modal-action-btn wb-btn" target="_blank">Wildberries</a>
+                    <a href="${p.ozon_link}" class="modal-action-btn ozon-btn" target="_blank">Ozon</a>
                 </div>
             </div>
         </div>
@@ -347,32 +269,6 @@ window.changeModalImage = function(btn, dir) {
         img.setAttribute('src', p.images[newIndex]);
         img.style.opacity = 1;
     }, 250);
-    
-    const dots = modal.querySelectorAll('.modal-slider-dot');
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === newIndex);
-    });
-};
-
-window.goToModalImage = function(dot, index) {
-    const modal = document.getElementById('article-modal');
-    const img = modal.querySelector('#modal-product-img');
-    const id = modal.dataset.productId;
-    const p = productsData[id];
-    if (!p || !p.images) return;
-    if (index === parseInt(modal.dataset.currentImageIndex)) return;
-    
-    modal.dataset.currentImageIndex = index;
-    img.style.opacity = 0;
-    setTimeout(() => {
-        img.setAttribute('src', p.images[index]);
-        img.style.opacity = 1;
-    }, 250);
-    
-    const dots = modal.querySelectorAll('.modal-slider-dot');
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-    });
 };
 
 window.openArticle = function(key) {
@@ -392,36 +288,20 @@ window.openArticle = function(key) {
 
 window.openInfoModal = function(key) { window.openArticle(key); };
 
-window.closeArticle = function() { 
-    document.getElementById('article-modal').classList.remove('active'); 
-};
+window.closeArticle = function() { document.getElementById('article-modal').classList.remove('active'); };
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') window.closeArticle(); });
 
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-        window.closeArticle();
-    }
-});
-
+// ===== ЗАПУСК ПОСЛЕ ЗАГРУЗКИ =====
 document.addEventListener("DOMContentLoaded", () => {
-    const observerOptions = {
-        root: null,
-        rootMargin: "0px 0px -50px 0px", 
-        threshold: 0.1
-    };
-
+    const observerOptions = { root: null, rootMargin: "0px 0px -50px 0px", threshold: 0.1 };
     const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                obs.unobserve(entry.target); 
-            }
+            if (entry.isIntersecting) { entry.target.classList.add("active"); obs.unobserve(entry.target); }
         });
     }, observerOptions);
 
-    const headers = document.querySelectorAll('.section-title, .section-subtitle, .market-title, .partners-title');
-    headers.forEach(el => {
-        el.classList.add('reveal-top-down');
-        observer.observe(el);
+    document.querySelectorAll('.section-title, .section-subtitle, .market-title, .partners-title').forEach(el => {
+        el.classList.add('reveal-top-down'); observer.observe(el);
     });
 
     const contentBlocks = [
@@ -430,14 +310,22 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll('.review-item'),
         document.querySelectorAll('.market-btn')
     ];
-
     contentBlocks.forEach(nodeList => {
         nodeList.forEach((el, index) => {
-            el.classList.add('reveal-left-right');
-            el.style.transitionDelay = `${index * 0.15}s`;
-            observer.observe(el);
+            el.classList.add('reveal-left-right'); el.style.transitionDelay = `${index * 0.15}s`; observer.observe(el);
         });
     });
 
     initCardSliders();
+
+    const heroSwiper = new Swiper('.hero-swiper', {
+        loop: true, slidesPerView: 'auto', centeredSlides: true,
+        autoplay: { delay: 1500, disableOnInteraction: false }, speed: 800,
+        breakpoints: { 320: { spaceBetween: 30 }, 600: { spaceBetween: 50 }, 992: { spaceBetween: 80 } }
+    });
+
+    const partnersSwiper = new Swiper('.partners-swiper', {
+        loop: true, autoplay: { delay: 2000, disableOnInteraction: false }, speed: 800,
+        breakpoints: { 320: { slidesPerView: 2, spaceBetween: 20 }, 480: { slidesPerView: 3, spaceBetween: 30 }, 768: { slidesPerView: 4, spaceBetween: 40 }, 1024: { slidesPerView: 5, spaceBetween: 50 } }
+    });
 });

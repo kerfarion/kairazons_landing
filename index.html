@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бритвы KAI — японское качество для идеального бритья</title>
+    <!-- Подключаем CSS Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,20 +29,25 @@
         <div class="hero-overlay"></div>
         <div class="container-fluid hero-container">
             
-            <!-- ===== БЕГУЩАЯ СТРОКА (каждое слово отдельно, непрерывно) ===== -->
-            <div class="hero-ticker-wrapper">
-                <div class="hero-ticker-track">
-                    <!-- Первый набор -->
-                    <div class="hero-ticker-item">Технологии</div>
-                    <div class="hero-ticker-item">Качество</div>
-                    <div class="hero-ticker-item">Инновации</div>
-                    <!-- Второй набор для бесконечности -->
-                    <div class="hero-ticker-item">Технологии</div>
-                    <div class="hero-ticker-item">Качество</div>
-                    <div class="hero-ticker-item">Инновации</div>
+            <!-- ===== КАРУСЕЛЬ (СЛОВА) ===== -->
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Оригинал -->
+                    <div class="swiper-slide"><div class="carousel-item-word">Технологии</div></div>
+                    <div class="swiper-slide"><div class="carousel-item-word">Качество</div></div>
+                    <div class="swiper-slide"><div class="carousel-item-word">Инновации</div></div>
+                    
+                    <!-- Копия 1 -->
+                    <div class="swiper-slide"><div class="carousel-item-word">Технологии</div></div>
+                    <div class="swiper-slide"><div class="carousel-item-word">Качество</div></div>
+                    <div class="swiper-slide"><div class="carousel-item-word">Инновации</div></div>
+                    
+                    <!-- Копия 2 -->
+                    <div class="swiper-slide"><div class="carousel-item-word">Технологии</div></div>
+                    <div class="swiper-slide"><div class="carousel-item-word">Качество</div></div>
+                    <div class="swiper-slide"><div class="carousel-item-word">Инновации</div></div>
                 </div>
             </div>
-            <!-- ======================================================== -->
 
             <div class="hero-socials">
                 <a href="#" class="social-link-item"><img src="images/telegram-icon.png" alt=""> Telegram</a>
@@ -231,22 +238,31 @@
         </div>
     </section>
 
+    <!-- ===== КАРУСЕЛЬ (ЛОГОТИПЫ) ===== -->
     <section class="partners">
         <h3 class="partners-title">Наши партнеры</h3>
-        <div class="partners-ticker-view">
-            <div class="partners-line line-1">
-                <img src="images/partner1.png" alt="Partner" class="partner-img">
-                <img src="images/partner2.png" alt="Partner" class="partner-img">
-                <img src="images/partner3.png" alt="Partner" class="partner-img">
-                <img src="images/partner4.png" alt="Partner" class="partner-img">
-                <img src="images/partner5.png" alt="Partner" class="partner-img">
-            </div>
-            <div class="partners-line line-2">
-                <img src="images/partner1.png" alt="Partner" class="partner-img">
-                <img src="images/partner2.png" alt="Partner" class="partner-img">
-                <img src="images/partner3.png" alt="Partner" class="partner-img">
-                <img src="images/partner4.png" alt="Partner" class="partner-img">
-                <img src="images/partner5.png" alt="Partner" class="partner-img">
+        <div class="swiper partners-swiper">
+            <div class="swiper-wrapper">
+                <!-- Оригинал -->
+                <div class="swiper-slide"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner4.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner5.png" alt="Partner" class="carousel-item-logo"></div>
+                
+                <!-- Копия 1 -->
+                <div class="swiper-slide"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner4.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner5.png" alt="Partner" class="carousel-item-logo"></div>
+
+                <!-- Копия 2 -->
+                <div class="swiper-slide"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner4.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="swiper-slide"><img src="images/partner5.png" alt="Partner" class="carousel-item-logo"></div>
             </div>
         </div>
     </section>
@@ -272,6 +288,8 @@
         </div>
     </div>
 
+    <!-- Подключаем JS Swiper и ваш скрипт -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
 </body>
 </html>

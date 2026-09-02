@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бритвы KAI — японское качество для идеального бритья</title>
-    <!-- Подключаем CSS Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,22 +28,13 @@
         <div class="container-fluid hero-container">
             
             <!-- ===== КАРУСЕЛЬ (СЛОВА) ===== -->
-            <div class="swiper hero-swiper">
-                <div class="swiper-wrapper">
-                    <!-- Оригинал -->
-                    <div class="swiper-slide"><div class="carousel-item-word">Технологии</div></div>
-                    <div class="swiper-slide"><div class="carousel-item-word">Качество</div></div>
-                    <div class="swiper-slide"><div class="carousel-item-word">Инновации</div></div>
-                    
-                    <!-- Копия 1 -->
-                    <div class="swiper-slide"><div class="carousel-item-word">Технологии</div></div>
-                    <div class="swiper-slide"><div class="carousel-item-word">Качество</div></div>
-                    <div class="swiper-slide"><div class="carousel-item-word">Инновации</div></div>
-                    
-                    <!-- Копия 2 -->
-                    <div class="swiper-slide"><div class="carousel-item-word">Технологии</div></div>
-                    <div class="swiper-slide"><div class="carousel-item-word">Качество</div></div>
-                    <div class="swiper-slide"><div class="carousel-item-word">Инновации</div></div>
+            <div class="custom-carousel hero-carousel" id="heroCarousel">
+                <div class="custom-carousel-track">
+                    <!-- Достаточно одного набора, JS сам размножит для бесконечности -->
+                    <div class="carousel-slide-item"><div class="carousel-item-word">Технологии</div></div>
+                    <div class="carousel-slide-item"><div class="carousel-item-word">Качество</div></div>
+                    <div class="carousel-slide-item"><div class="carousel-item-word">Инновации</div></div>
+                    <div class="carousel-slide-item"><div class="carousel-item-word">Надежность</div></div>
                 </div>
             </div>
 
@@ -156,7 +145,7 @@
             <h2 class="section-title">Блог</h2>
             <div class="blog-products-grid">
                 <div class="blog-card-fixed">
-                    <div class="blog-img-wrapper"><img src="images/blog1.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-img-wrapper"><img src="images/blog3.png" alt="KAI Blog" class="blog-content-img"></div>
                     <div class="blog-card-content">
                         <h4>KAI Moisturizing Razor</h4>
                         <p>Роскошный уход и безупречная гладкость для Неё</p>
@@ -164,7 +153,7 @@
                     </div>
                 </div>
                 <div class="blog-card-fixed">
-                    <div class="blog-img-wrapper"><img src="images/blog2.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-img-wrapper"><img src="images/blog4.png" alt="KAI Blog" class="blog-content-img"></div>
                     <div class="blog-card-content">
                         <h4>KAI T-shaped Razor</h4>
                         <p>Ювелирная точность для деликатных зон</p>
@@ -172,7 +161,7 @@
                     </div>
                 </div>
                 <div class="blog-card-fixed">
-                    <div class="blog-img-wrapper"><img src="images/blog3.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-img-wrapper"><img src="images/blog1.png" alt="KAI Blog" class="blog-content-img"></div>
                     <div class="blog-card-content">
                         <h4>KAI razor «Besty EX»</h4>
                         <p>Технологии и комфорт в классическом исполнении</p>
@@ -180,7 +169,7 @@
                     </div>
                 </div>
                 <div class="blog-card-fixed">
-                    <div class="blog-img-wrapper"><img src="images/blog4.png" alt="KAI Blog" class="blog-content-img"></div>
+                    <div class="blog-img-wrapper"><img src="images/blog2.png" alt="KAI Blog" class="blog-content-img"></div>
                     <div class="blog-card-content">
                         <h4>Kai Paper Razor</h4>
                         <p>Революция в бритье. Забота о коже и планете</p>
@@ -241,28 +230,14 @@
     <!-- ===== КАРУСЕЛЬ (ЛОГОТИПЫ) ===== -->
     <section class="partners">
         <h3 class="partners-title">Наши партнеры</h3>
-        <div class="swiper partners-swiper">
-            <div class="swiper-wrapper">
-                <!-- Оригинал -->
-                <div class="swiper-slide"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner4.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner5.png" alt="Partner" class="carousel-item-logo"></div>
-                
-                <!-- Копия 1 -->
-                <div class="swiper-slide"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner4.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner5.png" alt="Partner" class="carousel-item-logo"></div>
-
-                <!-- Копия 2 -->
-                <div class="swiper-slide"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner4.png" alt="Partner" class="carousel-item-logo"></div>
-                <div class="swiper-slide"><img src="images/partner5.png" alt="Partner" class="carousel-item-logo"></div>
+        <div class="custom-carousel partners-carousel" id="partnersCarousel">
+            <div class="custom-carousel-track">
+                <!-- Оригинал (тоже только 1 набор) -->
+                <div class="carousel-slide-item"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="carousel-slide-item"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="carousel-slide-item"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="carousel-slide-item"><img src="images/partner4.png" alt="Partner" class="carousel-item-logo"></div>
+                <div class="carousel-slide-item"><img src="images/partner5.png" alt="Partner" class="carousel-item-logo"></div>
             </div>
         </div>
     </section>
@@ -271,9 +246,11 @@
         <div class="container-fluid footer-wrap">
             <div class="footer-logo-block"><img src="images/logo-black.png" alt="KAI Logo"></div>
             <div class="footer-links">
-                <button onclick="openInfoModal('about-company')">О нас</button>
+                <button onclick="openInfoModal('terms')">Пользовательское соглашение</button>
                 <a href="#catalog" class="footer-nav-link">Каталог</a>
-                <button onclick="openInfoModal('contacts-company')">Контакты</button>
+                <button onclick="openInfoModal('about-company')">О нас</button>
+                <button onclick="openInfoModal('contacts-company')">Контакты</button>          
+                <button onclick="openInfoModal('privacy')">Политика конфиденциальности</button>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-copyright-line"><p>© 2025 ООО РЯТИКО</p></div>
@@ -288,8 +265,7 @@
         </div>
     </div>
 
-    <!-- Подключаем JS Swiper и ваш скрипт -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Только твой родной скрипт -->
     <script src="script.js" defer></script>
 </body>
 </html>

@@ -8,6 +8,8 @@
 </head>
 <body>
 
+    <div id="scroll-progress-bar" class="scroll-progress" aria-hidden="true"></div>
+
     <header class="header" id="main-header">
         <div class="container-fluid header-container">
             <a href="#" class="logo"><img src="images/logo.png" alt="KAI Logo"></a>
@@ -27,14 +29,32 @@
         <div class="hero-overlay"></div>
         <div class="container-fluid hero-container">
             
-            <!-- ===== КАРУСЕЛЬ (СЛОВА) ===== -->
             <div class="custom-carousel hero-carousel" id="heroCarousel">
                 <div class="custom-carousel-track">
-                    <!-- Достаточно одного набора, JS сам размножит для бесконечности -->
                     <div class="carousel-slide-item"><div class="carousel-item-word">Технологии</div></div>
+                    <div class="carousel-slide-item carousel-separator" aria-hidden="true">
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/>
+                        </svg>
+                    </div>
                     <div class="carousel-slide-item"><div class="carousel-item-word">Качество</div></div>
+                    <div class="carousel-slide-item carousel-separator" aria-hidden="true">
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/>
+                        </svg>
+                    </div>
                     <div class="carousel-slide-item"><div class="carousel-item-word">Инновации</div></div>
+                    <div class="carousel-slide-item carousel-separator" aria-hidden="true">
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/>
+                        </svg>
+                    </div>
                     <div class="carousel-slide-item"><div class="carousel-item-word">Надежность</div></div>
+                    <div class="carousel-slide-item carousel-separator" aria-hidden="true">
+                        <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C12 7 17 12 24 12C17 12 12 17 12 24C12 17 7 12 0 12C7 12 12 7 12 0Z"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
 
@@ -48,14 +68,12 @@
     <section id="catalog" class="catalog section-padding">
         <div class="container-fluid">
             <h2 class="section-title">КАТАЛОГ</h2>
-            
             <div class="products-grid">
                 
-                <!-- 1-я карточка → Одноразовый с плавающей головкой (двойное лезвие) -->
                 <div class="product-card-fixed" data-id="1" onclick="openProductModal(1)">
                     <div class="product-img-wrapper">
                         <button class="slider-arrow prev" onclick="changeImage(event, this, 1, -1)">&lsaquo;</button>
-                        <img src="images/product1_1.png" alt="Станок с плавающей головкой KAI" class="product-img" data-slide="0">
+                        <img src="images/product1_1.jpg" alt="Станок с плавающей головкой KAI" class="product-img" data-slide="0">
                         <button class="slider-arrow next" onclick="changeImage(event, this, 1, 1)">&rsaquo;</button>
                     </div>
                     <div class="product-info">
@@ -68,7 +86,6 @@
                     </div>
                 </div>
 
-                <!-- 2-я карточка → Эко-картон -->
                 <div class="product-card-fixed" data-id="2" onclick="openProductModal(2)">
                     <div class="product-img-wrapper">
                         <button class="slider-arrow prev" onclick="changeImage(event, this, 2, -1)">&lsaquo;</button>
@@ -85,7 +102,6 @@
                     </div>
                 </div>
 
-                <!-- 3-я карточка → Т-образный для зоны бикини -->
                 <div class="product-card-fixed" data-id="black" onclick="openProductModal('black')">
                     <div class="product-img-wrapper">
                         <button class="slider-arrow prev" onclick="changeImage(event, this, 'black', -1)">&lsaquo;</button>
@@ -102,7 +118,6 @@
                     </div>
                 </div>
 
-                <!-- 4-я карточка → Водостойкий женский (5 лезвий) -->
                 <div class="product-card-fixed" data-id="3" onclick="openProductModal(3)">
                     <div class="product-img-wrapper">
                         <button class="slider-arrow prev" onclick="changeImage(event, this, 3, -1)">&lsaquo;</button>
@@ -119,7 +134,6 @@
                     </div>
                 </div>
 
-                <!-- 5-я карточка → Женский одноразовый -->
                 <div class="product-card-fixed" data-id="eco" onclick="openProductModal('eco')">
                     <div class="product-img-wrapper">
                         <button class="slider-arrow prev" onclick="changeImage(event, this, 'eco', -1)">&lsaquo;</button>
@@ -183,34 +197,45 @@
     <section id="reviews" class="reviews section-padding">
         <div class="container-fluid">
             <h2 class="section-title">Отзывы</h2>
-            <p class="section-subtitle">Более 500+ отзывов на маркетплейсах</p>
             <div class="reviews-slider">
                 <div class="review-item">
-                    <p class="review-text">«отличные станочки , рекомендую !»</p>
-                    <div class="review-meta">
-                        <img src="images/ozon-mini.png" alt="Ozon" class="source-ico">
-                        <span class="review-author">Владимир О.</span>
+                    <div class="review-header">
+                        <span class="review-author">Анна</span>
+                        <span class="review-stars">★★★★★</span>
                     </div>
-                </div>
-                <div class="review-item">
-                    <p class="review-text">«Товар оригинальный. Упаковка в пупырку»</p>
+                    <p class="review-text">«Очень качественные станки! Лезвия острые, не раздражают кожу. Отдельно хочу отметить удобную ручку и стильный дизайн.»</p>
                     <div class="review-meta">
                         <img src="images/wb-mini.png" alt="WB" class="source-ico">
-                        <span class="review-author">Роман</span>
                     </div>
                 </div>
                 <div class="review-item">
-                    <p class="review-text">«Станки хорошо аккуратно упакованы в пупырку... качество отличное,бреют хорошо»</p>
+                    <div class="review-header">
+                        <span class="review-author">Мария</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">«Эко-станок из картона — это просто вау! Лёгкий, неожиданно, идеально для путешествий. И главное — 0% пластика.»</p>
                     <div class="review-meta">
                         <img src="images/ozon-mini.png" alt="Ozon" class="source-ico">
-                        <span class="review-author">Надежда З.</span>
                     </div>
                 </div>
                 <div class="review-item">
-                    <p class="review-text">«Отличные станки, пришли отлично упакованы.»</p>
+                    <div class="review-header">
+                        <span class="review-author">Ольга</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">«Станок для зоны бикини — спасение! Очень удобно и безопасно. Использую уже месяц, лезвие как новое.»</p>
                     <div class="review-meta">
                         <img src="images/ozon-mini.png" alt="Ozon" class="source-ico">
-                        <span class="review-author">Анна</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">Екатерина</span>
+                        <span class="review-stars">★★★★★</span>
+                    </div>
+                    <p class="review-text">«Женский станок с 5 лезвиями — лучший, что у меня был. Кожа после бритья мягкая и гладкая, без раздражения.»</p>
+                    <div class="review-meta">
+                        <img src="images/wb-mini.png" alt="WB" class="source-ico">
                     </div>
                 </div>
             </div>
@@ -227,12 +252,10 @@
         </div>
     </section>
 
-    <!-- ===== КАРУСЕЛЬ (ЛОГОТИПЫ) ===== -->
     <section class="partners">
         <h3 class="partners-title">Наши партнеры</h3>
         <div class="custom-carousel partners-carousel" id="partnersCarousel">
             <div class="custom-carousel-track">
-                <!-- Оригинал (тоже только 1 набор) -->
                 <div class="carousel-slide-item"><img src="images/partner1.png" alt="Partner" class="carousel-item-logo"></div>
                 <div class="carousel-slide-item"><img src="images/partner2.png" alt="Partner" class="carousel-item-logo"></div>
                 <div class="carousel-slide-item"><img src="images/partner3.png" alt="Partner" class="carousel-item-logo"></div>
@@ -265,7 +288,22 @@
         </div>
     </div>
 
-    <!-- Только твой родной скрипт -->
+    <div id="sakura-cursor-shadow" class="sacura-shadow" aria-hidden="true">
+        <svg viewBox="0 0 100 100" class="sacura-svg">
+            <defs>
+                <path id="base-petal" d="M50 50 C38 34 31 18 40 8 C44 4 48 8 50 10 C52 8 56 4 60 8 C69 18 62 34 50 50 Z" />
+            </defs>
+            <g class="sakura-petals">
+                <use href="#base-petal" />
+                <use href="#base-petal" transform="rotate(72 50 50)" />
+                <use href="#base-petal" transform="rotate(144 50 50)" />
+                <use href="#base-petal" transform="rotate(216 50 50)" />
+                <use href="#base-petal" transform="rotate(288 50 50)" />
+                <circle cx="50" cy="50" r="4.5" class="sakura-core" />
+            </g>
+        </svg>
+    </div>
+
     <script src="script.js" defer></script>
 </body>
 </html>

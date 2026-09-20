@@ -3,7 +3,7 @@ const productsData = {
     1: {
         name: "Одноразовый бритвенный станок с плавающей головкой с двойным лезвием, 2 шт.",
         price: 350,
-        imageCount: 4,
+        imageCount: 5,
         desc: "Бритва, оснащенная лезвиями особой формы и двойным титановым покрытием — они обеспечивают безупречное скольжение и бережный контакт с кожей.\n\n— Эргономичная ручка с идеальным балансом — удобно лежит в руке.\n— Плавающая головка и полоски с алоэ — мягкое скольжение без раздражения.\n— Антибактериальное покрытие — защита кожи после каждого движения.",
         specs: "Количество в упаковке: 2 шт. • Число лезвий: 2 • Покрытие: двойное титановое • Полоски: с алоэ • Антибактериальное покрытие",
         wb_link: "https://www.wildberries.ru/catalog/474774443/detail.aspx?targetUrl=SN",
@@ -12,7 +12,7 @@ const productsData = {
     2: {
         name: "Одноразовый бритвенный станок из эко-картона с тройным лезвием из нержавеющей стали",
         price: 350,
-        imageCount: 4,
+        imageCount: 5,
         desc: "Первый в мире бритвенный станок без использования пластика! Благодаря плоской упаковке станок весит всего 4 грамма, а защитное покрытие обеспечивает сохранность картона в температуре воды до 40°.\n\n— Тройное лезвие из японской стали — гладкое и точное бритьё.\n— Собирается как оригами — удобно брать в путешествия.\n— 0% пластика — забота о коже и планете.",
         specs: "Материал ручки: эко-картон • Число лезвий: 3 • Вес: 4 г • Водостойкость картона: до 40°C • 0% пластика",
         wb_link: "https://www.wildberries.ru/catalog/474499281/detail.aspx?targetUrl=SN",
@@ -21,7 +21,7 @@ const productsData = {
     'black': {
         name: "Т-образный одноразовый станок для зоны бикини, 2 шт.",
         price: 390,
-        imageCount: 3,
+        imageCount: 5,
         desc: "Специально для деликатной зоны бикини — безопасный и безболезненный способ удаления волосков.\n— Защитная решетка — лезвие не касается кожи, только волоски\n— Приподнимает и срезает даже самые короткие волоски\n— Т-образная форма — для точного моделирования стрижки\n— Острое лезвие — хватает на 2 месяца использования\n— Компактная головка — для аккуратного бритья в труднодоступных местах",
         specs: "Количество в упаковке: 2 шт. • Тип: Т-образный • Защитная решетка • Срок службы лезвия: до 2 месяцев • Компактная головка",
         wb_link: "https://www.wildberries.ru/catalog/525521253/detail.aspx?size=725075125",
@@ -30,7 +30,7 @@ const productsData = {
     3: {
         name: "Водостойкий одноразовый бритвенный станок с 5 лезвиями и увлажняющей полоской для женщин, 3 шт.",
         price: 990,
-        imageCount: 3,
+        imageCount: 5,
         desc: "Станок, разработанный по японским технологиям, специально для нежной женской кожи, идеально подходит для ног, подмышек и области бикини.\n\n— 5 острых лезвий из нержавеющей стали — безупречное скольжение даже по самым тонким волоскам.\n— Плавающая головка — точно повторяет контуры тела для комфортного бритья.\n— Увлажняющая полоска с аргановым маслом и витамином Е — смягчает и защищает кожу.\n— Прорезиненная ручка — удобно лежит в руке даже в душе.",
         specs: "Количество в упаковке: 3 шт. • Число лезвий: 5 • Материал лезвий: шведская нержавеющая сталь • Полоска: аргановое масло + витамин Е • Ручка: прорезиненная",
         wb_link: "https://www.wildberries.ru/catalog/525515822/detail.aspx?size=725069568",
@@ -69,7 +69,7 @@ const articlesData = {
         <ul>
             <li><strong>Технология 5 лезвий:</strong> Пять сверхострых лезвий из нержавеющей стали обеспечивают безупречно чистое бритье с первого движения, легко справляясь даже с тонкими волосками.</li>
             <li><strong>Интенсивное увлажнение:</strong> Широкая смазывающая полоска обогащена аргановым маслом и витамином Е, которые интенсивно питают, смягчают и защищают кожу прямо в процессе бритья.</li>
-            <li><strong>Адаптация к контурам:</strong>  Плавающая головка точно повторяет каждый изгиб вашего тела, гарантируя комфорт и безопасность на самых сложных участках.</li>
+            <li><strong>Адаптация к контурам:</strong> Плавающая головка точно повторяет каждый изгиб вашего тела, гарантируя комфорт и безопасность на самых сложных участках.</li>
             <li><strong>Уверенный контроль:</strong> Эргономичная прорезиненная ручка не скользит в руке, обеспечивая полный контроль даже в душе.</li>
         </ul>
         <p class="conclusion"><strong>KAI Moisturizing Razor</strong> — когда бритье становится частью ухода за собой.</p>
@@ -243,7 +243,7 @@ window.changeImage = function(event, btn, productId, dir) {
     setTimeout(() => startAutoSlide(card), 3000);
 };
 
-// ===== НОВЫЙ ДИЗАЙН МОДАЛЬНОГО ОКНА (ГАЛЕРЕЯ) =====
+// ===== МОДАЛЬНОЕ ОКНО ТОВАРОВ =====
 window.openProductModal = function(id) {
     const p = productsData[id];
     if (!p) return;
@@ -252,12 +252,10 @@ window.openProductModal = function(id) {
     
     const images = p.images;
     
-    // Генерация ленты миниатюр
     let thumbsHtml = images.map((src, idx) => `
         <img src="${src}" class="modal-thumb ${idx === 0 ? 'active' : ''}" onclick="setModalMainImage(this, '${src}')" alt="thumb">
     `).join('');
 
-    // Парсинг спецификаций в список, выделяя ключ (до двоеточия) жирным шрифтом
     let specsList = p.specs.split('•').map(s => {
         let text = s.trim();
         let formatted = text.replace(/(.*?):/, '<strong>$1</strong>:');
@@ -293,17 +291,16 @@ window.openProductModal = function(id) {
     modal.classList.add('active');
 };
 
-// Смена главного изображения по клику на миниатюру с эффектом fade
 window.setModalMainImage = function(thumbEl, src) {
     document.querySelectorAll('.modal-thumb').forEach(el => el.classList.remove('active'));
     thumbEl.classList.add('active');
     
     const mainImg = document.getElementById('modal-main-img');
-    mainImg.style.opacity = 0; // Плавное затухание
+    mainImg.style.opacity = 0;
     
     setTimeout(() => {
         mainImg.src = src;
-        mainImg.style.opacity = 1; // Плавное появление
+        mainImg.style.opacity = 1;
     }, 200);
 };
 
@@ -327,7 +324,7 @@ window.openInfoModal = function(key) { window.openArticle(key); };
 window.closeArticle = function() { document.getElementById('article-modal').classList.remove('active'); };
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') window.closeArticle(); });
 
-// ===== НАТИВНЫЙ БЕСКОНЕЧНЫЙ СЛАЙДЕР С ЦЕНТРИРОВАНИЕМ =====
+// ===== БЕСКОНЕЧНЫЙ СЛАЙДЕР С ЦЕНТРИРОВАНИЕМ =====
 function initVanillaCarousel(containerId, autoInterval = 2000, isCentered = false) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -398,7 +395,7 @@ function initVanillaCarousel(containerId, autoInterval = 2000, isCentered = fals
     setInterval(nextSlide, autoInterval);
 }
 
-// ==== ОФОРМЛЕНИЕ КУРСОРА ==== //
+// ==== КУРСОР САКУРА ==== //
 function initSakuraCursorShadow() {
     if (window.matchMedia('(pointer: coarse)').matches) return;
 
@@ -431,7 +428,7 @@ function initSakuraCursorShadow() {
     requestAnimationFrame(render);
 }
 
-// ===== ИНДИКАТОР ПРОГРЕССА ПРОКРУТКИ СТРАНИЦЫ =====
+// ===== СКРОЛЛ-ПРОГРЕСС =====
 function initScrollProgress() {
     const progressBar = document.getElementById('scroll-progress-bar');
     if (!progressBar) return;
